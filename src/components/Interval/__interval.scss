@@ -1,0 +1,65 @@
+.replaybtn{
+    background-color: white;
+    border-radius:5px;
+    color:$rockColor;
+    border:none;
+}
+
+
+
+
+.bg-play{
+    background-image: url("../public/images/bg-triangle.svg");
+    background-position: center;
+    background-size:200px;
+    background-repeat: no-repeat;
+}
+.place-holder{
+    height: 200px;
+    width: 200px;
+    .circle{
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.300);
+
+    }
+}
+
+.p-absolute{
+    position:absolute;
+   z-index: 0;
+   top:7%;
+   left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.p-relative{
+    position:relative;
+    z-index: 1;
+    
+}
+
+.p-absolute-down{
+    position:absolute;
+    z-index: 0;
+    top:80%;
+    left:50%;
+     transform: translate(-50%,-50%);
+}
+
+.gradient1{
+    background-color: rgba(169, 169, 167, 0.26);
+    width: 200px;
+    height: 200px;
+}
+.gradient2{
+    width: 350px;
+    height: 350px;
+    background-color: rgba(169, 169, 167, 0.16);
+}
+.gradient3{
+    width: 500px;
+    height: 500px;
+    background-color: rgba(169, 169, 167, 0.06);
+}

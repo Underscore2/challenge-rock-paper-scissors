@@ -1,0 +1,55 @@
+.dbutton{
+    .buttonRPS{
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    }
+    .rock{
+       @include button($rockColor,$rockShadow)
+    }
+    .paper{
+        @include button($paperColor,$paperShadow)
+     }
+     .scissors{
+        @include button($scissorsColor,$scissorsShadow)
+     };
+     z-index: 1;
+
+}
+
+
+@media (max-width: 675px){
+    .dbutton{
+        .buttonRPS{
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        }
+        .rock{
+           @include button($rockColor,$rockShadow)
+        }
+        .paper{
+            @include button($paperColor,$paperShadow)
+         }
+         .scissors{
+            @include button($scissorsColor,$scissorsShadow)
+         }
+    
+    }
+
+    .insidebtn{
+        background-color: white;
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+/*         box-shadow: 0 -6px rgba(231, 230, 230, 0.708);
+ */    }
+
+}
+.insidebtn{
+    background-color: white;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+/*     box-shadow: 0 -6px rgba(231, 230, 230, 0.708);
+ */}

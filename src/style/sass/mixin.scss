@@ -1,0 +1,16 @@
+@mixin background($arg) {
+    background: -moz-radial-gradient($arg);
+    background: -webkit-radial-gradient($arg);
+    background: radial-gradient($arg);
+    background-position: top;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1f2b3b",endColorstr="#141426",GradientType=1); 
+}
+
+
+@mixin button($arg,$arg2){
+    border-color: $arg;
+    background-color: $arg;
+    border:none;
+    box-shadow: 0px 10px $arg2;
+
+}

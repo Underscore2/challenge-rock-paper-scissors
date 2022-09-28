@@ -1,0 +1,48 @@
+@import "style/sass/variables.scss";
+@import "style/sass/mixin.scss";
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+@import "../src/style/sass/_reset";
+@import "../src/components/Score/_score";
+@import "../src/components/Button/_button";
+@import "../src/components/Interval/_interval";
+@import "../src/components/Rules/_rules";
+/* *{
+    outline: 1px solid red;
+}; */
+
+
+html {
+    font-size: 1rem;
+   
+   
+  }
+.overflow{
+    overflow-x: hidden;
+}
+
+.vh100{
+    height:100vh;
+}
+
+.background{
+    background:$backgroundColor ;
+    @include background($backgroundGradient)
+}
+
+.font-barlow{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 700;
+}
+
+.p-shadow-absolute{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:55%;
+    left:50%;
+    z-index: -1;
+}
+
+
+
+
+/*# sourceMappingURL=App.scss.map */

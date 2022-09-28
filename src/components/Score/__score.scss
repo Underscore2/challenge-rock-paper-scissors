@@ -1,0 +1,33 @@
+
+.border-header{
+    border: 2px solid $header;
+    border-radius: 15px;
+    }
+
+.display-score{
+    border-radius:10px;
+   h4{
+        color:$scoretext
+    }
+    h1{
+        color:$darktext;
+        font-weight: 700;
+        font-size:50px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+}
+
+.line-height{
+ line-height: 45%;
+}
+
+@media (max-width: 675px){
+    .display-score{
+        h4{
+            font-size: 1.5rem;
+        }
+        h1{
+            font-size: 3rem;
+        }
+      }
+}

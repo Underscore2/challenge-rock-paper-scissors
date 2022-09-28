@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+a ::after {
+  text-decoration: none;
+}
+
+.border-header {
+  border: 2px solid hsl(217deg, 16%, 45%);
+  border-radius: 15px;
+}
+
+.display-score {
+  border-radius: 10px;
+}
+.display-score h4 {
+  color: hsl(229deg, 64%, 46%);
+}
+.display-score h1 {
+  color: hsl(229deg, 25%, 31%);
+  font-weight: 700;
+  font-size: 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.line-height {
+  line-height: 45%;
+}
+
+@media (max-width: 675px) {
+  .display-score h4 {
+    font-size: 1.5rem;
+  }
+  .display-score h1 {
+    font-size: 3rem;
+  }
+}
+.dbutton {
+  z-index: 1;
+}
+.dbutton .buttonRPS {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+}
+.dbutton .rock {
+  border-color: hsl(349deg, 70%, 56%);
+  background-color: hsl(349deg, 70%, 56%);
+  border: none;
+  box-shadow: 0px 10px hsl(349deg, 71%, 42%);
+}
+.dbutton .paper {
+  border-color: hsl(230deg, 89%, 65%);
+  background-color: hsl(230deg, 89%, 65%);
+  border: none;
+  box-shadow: 0px 10px hsl(230deg, 89%, 42%);
+}
+.dbutton .scissors {
+  border-color: hsl(40deg, 84%, 53%);
+  background-color: hsl(40deg, 84%, 53%);
+  border: none;
+  box-shadow: 0px 10px hsl(39deg, 89%, 29%);
+}
+
+@media (max-width: 675px) {
+  .dbutton .buttonRPS {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+  }
+  .dbutton .rock {
+    border-color: hsl(349deg, 70%, 56%);
+    background-color: hsl(349deg, 70%, 56%);
+    border: none;
+    box-shadow: 0px 10px hsl(349deg, 71%, 42%);
+  }
+  .dbutton .paper {
+    border-color: hsl(230deg, 89%, 65%);
+    background-color: hsl(230deg, 89%, 65%);
+    border: none;
+    box-shadow: 0px 10px hsl(230deg, 89%, 42%);
+  }
+  .dbutton .scissors {
+    border-color: hsl(40deg, 84%, 53%);
+    background-color: hsl(40deg, 84%, 53%);
+    border: none;
+    box-shadow: 0px 10px hsl(39deg, 89%, 29%);
+  }
+  .insidebtn {
+    background-color: white;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    /*         box-shadow: 0 -6px rgba(231, 230, 230, 0.708);
+     */
+  }
+}
+.insidebtn {
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  /*     box-shadow: 0 -6px rgba(231, 230, 230, 0.708);
+   */
+}
+
+.replaybtn {
+  background-color: white;
+  border-radius: 5px;
+  color: hsl(349deg, 70%, 56%);
+  border: none;
+}
+
+.bg-play {
+  background-image: url("../public/images/bg-triangle.svg");
+  background-position: center;
+  background-size: 200px;
+  background-repeat: no-repeat;
+}
+
+.place-holder {
+  height: 200px;
+  width: 200px;
+}
+.place-holder .circle {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.p-absolute {
+  position: absolute;
+  z-index: 0;
+  top: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-relative {
+  position: relative;
+  z-index: 1;
+}
+
+.p-absolute-down {
+  position: absolute;
+  z-index: 0;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gradient1 {
+  background-color: rgba(169, 169, 167, 0.26);
+  width: 200px;
+  height: 200px;
+}
+
+.gradient2 {
+  width: 350px;
+  height: 350px;
+  background-color: rgba(169, 169, 167, 0.16);
+}
+
+.gradient3 {
+  width: 500px;
+  height: 500px;
+  background-color: rgba(169, 169, 167, 0.06);
+}
+
+.button-rules {
+  background-color: rgba(255, 105, 180, 0);
+  border-radius: 5px;
+}
+
+.modal .title {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+  color: hsl(217deg, 16%, 45%);
+}
+
+.button-close {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* *{
+    outline: 1px solid red;
+}; */
+html {
+  font-size: 1rem;
+}
+
+.overflow {
+  overflow-x: hidden;
+}
+
+.vh100 {
+  height: 100vh;
+}
+
+.background {
+  background: rgb(31, 55, 86);
+  background: -moz-radial-gradient(circle at top, hsl(214deg, 47%, 23%) 0%, hsl(237deg, 49%, 15%) 100%);
+  background: -webkit-radial-gradient(circle at top, hsl(214deg, 47%, 23%) 0%, hsl(237deg, 49%, 15%) 100%);
+  background: radial-gradient(circle at top, hsl(214deg, 47%, 23%) 0%, hsl(237deg, 49%, 15%) 100%);
+  background-position: top;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1f2b3b",endColorstr="#141426",GradientType=1);
+}
+
+.font-barlow {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+}
+
+.p-shadow-absolute {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 55%;
+  left: 50%;
+  z-index: -1;
+}
+
+/*# sourceMappingURL=App.scss.map */
+
+/*# sourceMappingURL=App.css.map */

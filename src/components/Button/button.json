@@ -1,0 +1,15 @@
+[
+  {
+    "image-rock": "images/icon-rock.svg",
+    "type-rock": "rock",
+    "rock-id": 0,
+
+    "image-scissors": "images/icon-scissors.svg",
+    "type-scissors": "scissors",
+    "scissors-id": 2,
+
+    "image-paper": "images/icon-paper.svg",
+    "type-paper": "paper",
+    "paper-id":1
+  }
+]

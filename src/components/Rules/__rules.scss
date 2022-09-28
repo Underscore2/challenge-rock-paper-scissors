@@ -1,0 +1,18 @@
+.button-rules{
+    background-color: rgba(255, 105, 180, 0);
+    border-radius: 5px;
+}
+
+.modal{
+    .title{
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        font-weight: 700;
+        color:$header;
+    }
+}
+  
+.button-close{
+    border:none;
+    background-color: white;
+    cursor: pointer;
+}
