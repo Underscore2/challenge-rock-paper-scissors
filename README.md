@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Rock Paper Scissors](https://challenge-rock-paper-scissors-n774-5l3uuul3v-underscore2.vercel.app/)
+- Live Site URL: [Rock Paper Scissors](https://rock-paper-scissors-taupe-gamma.vercel.app/)
 
 ## My process
 - Breakdown of components with react
