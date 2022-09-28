@@ -16,16 +16,15 @@ export const ButtonRPS: React.FC<ButtonType> = ({
       shadow ? <Shadow/> : null
      } 
       
-            <button
+            <div
               className={`${type} buttonRPS d-flex justify-content-center align-items-center`}
               onClick={() => {
                 if (play) play(id!);
               }}
-            >
-              <div className="insidebtn d-flex justify-content-center align-items-center">
-                <img src={image} alt={type}></img>
-              </div>
-            </button>
+            >   <div className="insidebtn d-flex justify-content-center align-items-center">
+                <img  width={60} height={60} src={image} alt={type}></img>
+                </div>
+            </div>
         
     </div>
   );

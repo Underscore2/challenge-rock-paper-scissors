@@ -1,13 +1,10 @@
 import { useState } from "react";
 import { Results } from "../types/interfaces";
-export function usePlay(results?: any): any {
+export function usePlay(results?: any,setScore?:any): any {
   const [winner, setWinner] = useState(false);
   const [house, setHouse] = useState(true);
   const [shadow, setShadow] = useState<null|string>(null);
 
-  const [score, setScore] = useState<any>(
-    parseInt(localStorage.getItem("score")!) || 0
-  );
   const [interval, setInterval] = useState<Results>({
     time: false,
     draft: false,
@@ -60,10 +57,7 @@ export function usePlay(results?: any): any {
       (ai === 2 && id === 0)
       //SASSO 0 CARTA 1 FORBICI 2
     ) {
-         setScore((score: any) => {
-        localStorage.setItem("score", score + 1);
-        return score + 1;
-      });
+      
     
       setInterval({
         time: true,
@@ -85,13 +79,16 @@ export function usePlay(results?: any): any {
       setInterval({ ...results, time: false });
     }
   };
-
   const sideEffects=()=>{
     if (!winner) {
       const idTimeoutWinner = setTimeout(() => {
         setWinner(!winner);
         if (results.user.winner === true && results.draft === false) {
           setShadow("u");
+          setScore((score: any) => {
+            localStorage.setItem("score", score + 1);
+            return score + 1;
+          });
          
         }
         if (results.user.winner === false && results.draft === false) {
@@ -109,7 +106,6 @@ export function usePlay(results?: any): any {
   }
 
   return {
-    score,
     interval,
     userResult,
     aiResult,
@@ -125,6 +121,7 @@ export function usePlay(results?: any): any {
     handleShow,
     launch,
     replay,
-    sideEffects
+    sideEffects,
+    setScore
   };
 }

@@ -5,13 +5,13 @@ import { Results } from "../../types/interfaces";
 import { usePlay } from "../../hooks/usePlay";
 import { Rules } from "../Rules";
 import { Shadow } from "../Shadow";
-export const Interval: React.FC<Results | any> = ({ results, replay }) => {
+export const Interval: React.FC<Results | any> = ({ results, replay,setScore }) => {
   const { winner, house, userResult, aiResult, shadow, sideEffects } =
-    usePlay(results);
+    usePlay(results,setScore);
 
   useEffect(() => {
     sideEffects();
-  }, [sideEffects]);
+  }, []);
 
   return (
     <Row className="w-100 h-75 gap-3 gap-md-0 m-0 d-flex align-items-center justify-content-between ">
@@ -48,7 +48,7 @@ export const Interval: React.FC<Results | any> = ({ results, replay }) => {
         {winner ? (
           <>
             {results.draft ? (
-              <h1>DRAFT</h1>
+              <h1>DRAW</h1>
             ) : (
               <>
                 {results.user.winner ? (
@@ -60,7 +60,7 @@ export const Interval: React.FC<Results | any> = ({ results, replay }) => {
             )}
 
             <button onClick={replay} className="replaybtn px-5">
-              <h5 className="m-0 mx-5 py-2"> REPLAY </h5>
+              <span className="d-block m-0 mx-5 py-2"> REPLAY </span>
             </button>
           </>
         ) : null}

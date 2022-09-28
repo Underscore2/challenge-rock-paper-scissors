@@ -5,8 +5,13 @@ import { Rules } from "./components/Rules";
 import { Score } from "./components/Score";
 import { usePlay } from "./hooks/usePlay";
 import json from "../src/components/Rules/rules.json";
+import { useState } from "react";
 function App() {
-  const { score, interval, setInterval, replay, launch } = usePlay();
+  const { interval, setInterval, replay, launch} = usePlay(
+    
+  );
+  const [score,setScore]=useState( parseInt(localStorage.getItem("score")!) || 0
+  );
 
   return (
     <div className="App vh100 p-0 p-md-3 p-lg-5 d-flex flex-column gap-4 background">
@@ -20,6 +25,7 @@ function App() {
             results={interval}
             setInterval={setInterval}
             replay={replay}
+            setScore={setScore}
           />
         ) : (
           <Play start={launch} />
